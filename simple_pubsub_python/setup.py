@@ -24,6 +24,8 @@ setup(
             'natural_number_generator = simple_pubsub_python.natural_number_generator:main',
             'sum_calculator = simple_pubsub_python.sum_calculator:main',
             'factorial_calculator = simple_pubsub_python.factorial_calculator:main',
+            'custom_msg_publisher = simple_service_python.custom_msg_publisher:main',
+            'custom_msg_subscriber = simple_service_python.custom_msg_subscriber:main',
         ],
     },
 )
