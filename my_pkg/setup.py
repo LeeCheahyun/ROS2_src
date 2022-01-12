@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'simple_pubsub_python'
+package_name = 'my_pkg'
 
 setup(
     name=package_name,
@@ -20,12 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'basic_publisher = simple_pubsub_python.basic_publisher:main',
-            'natural_number_generator = simple_pubsub_python.natural_number_generator:main',
-            'sum_calculator = simple_pubsub_python.sum_calculator:main',
-            'factorial_calculator = simple_pubsub_python.factorial_calculator:main',
-            'custom_msg_publisher = simple_pubsub_python.custom_msg_publisher:main',
-            'custom_msg_subscriber = simple_pubsub_python.custom_msg_subscriber:main',
+            'cli = my_pkg.rptks_cli:main',
+            'server = my_pkg.rptks_server:main',
         ],
     },
 )

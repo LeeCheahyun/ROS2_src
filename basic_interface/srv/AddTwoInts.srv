@@ -1,0 +1,8 @@
+string c
+int64 a
+int64 b
+---
+int64 sum
+int64 mul
+float64 div
+int64 min

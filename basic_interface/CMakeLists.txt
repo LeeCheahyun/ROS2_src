@@ -41,6 +41,7 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/MockSensor.msg"
   "srv/MockSensorControl.srv"
+  "srv/AddTwoInts.srv"
 )
 
 ament_package()
