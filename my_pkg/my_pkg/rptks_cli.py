@@ -4,10 +4,10 @@ from rclpy.node import Node
 
 from basic_interface.srv import AddTwoInts
 
-class Rptkspub(Node):
+class Rptkscli(Node):
 
     def __init__(self):
-        super().__init__('rptks_pub')
+        super().__init__('rptkscli')
         self.client = self.create_client(AddTwoInts, 'rptks') # Client builder 패턴
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Waiting for custom service server...')
@@ -23,7 +23,7 @@ class Rptkspub(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    custom_service_client = Rptkspub()
+    custom_service_client = Rptkscli()
     custom_service_client.send_request()
 
     while rclpy.ok():

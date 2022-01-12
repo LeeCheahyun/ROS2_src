@@ -4,10 +4,10 @@ from rclpy.node import Node
 from basic_interface.srv import AddTwoInts
 
 
-class Rptkssub(Node):
+class Rptksserver(Node):
 
     def __init__(self):
-        super().__init__('rptks_sub')
+        super().__init__('rptks_server')
         self.srv = self.create_service(AddTwoInts, 'rptks', self.service_callback)
 
     def service_callback(self, request, response):
@@ -22,7 +22,7 @@ class Rptkssub(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    custom_service_server = Rptkssub()
+    custom_service_server = Rptksserver()
 
     rclpy.spin(custom_service_server)
 
